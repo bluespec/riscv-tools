@@ -1,0 +1,29 @@
+#!/usr/bin/make -f
+
+TOP=$(shell pwd)
+prefix=/opt/riscv32-unknown-elf-rv32im
+#PATH:=$(PATH):$(TOP)/debian/tmp/opt/riscv32-unknown-elf-rv32im/bin
+PATH:=$(PATH):/opt/riscv32-unknown-elf-rv32im/bin:/opt/riscv64-unknown-elf-rv64im/bin
+
+#export DESTDIR=$(TOP)/debian/tmp
+
+# riscv-gcc/libgcc/expr.c:770,773, at least
+export DEB_BUILD_MAINT_OPTIONS=hardening=-format
+export DEB_BUILD_OPTIONS=nostrip
+
+%:
+	dh $@ --parallel
+
+override_dh_auto_configure:
+	dh_auto_configure -B debian/tmp/riscv32-unknown-elf-rv32im -- --with-arch=rv32im --prefix=/opt/riscv32-unknown-elf-rv32im
+	dh_auto_configure -B debian/tmp/riscv64-unknown-elf-rv64im -- --with-arch=rv64im --prefix=/opt/riscv64-unknown-elf-rv64im
+
+override_dh_auto_build:
+	dh_auto_build -B debian/tmp/riscv32-unknown-elf-rv32im
+	dh_auto_build -B debian/tmp/riscv64-unknown-elf-rv64im
+
+override_dh_install:
+	mkdir -p debian/tmp/opt
+	cp -a /opt/riscv32-unknown-elf-rv32im debian/tmp/opt/
+	cp -a /opt/riscv64-unknown-elf-rv64im debian/tmp/opt/
+	dh_install

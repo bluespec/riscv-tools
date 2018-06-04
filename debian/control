@@ -1,0 +1,35 @@
+Source: riscv-gnu-toolchain
+Maintainer: Darius Rad <darius@bluespec.com>
+Section: devel
+Priority: optional
+Standards-Version: 3.9.8
+Build-Depends: debhelper (>= 9), autoconf, automake, autotools-dev, curl, libmpc-dev, libmpfr-dev, libgmp-dev, gawk, build-essential, bison, flex, texinfo, gperf, libtool, patchutils, bc, zlib1g-dev, python-dev
+#Homepage: http://www.bluespec.com/
+
+Package: riscv32-unknown-elf-rv32im
+Architecture: any
+Section: devel
+Depends: ${shlibs:Depends}, ${misc:Depends}
+#Suggests: 
+Description: Toolchain for the riscv32-unknown-elf target, rv32im variant
+ This package contains a development toolchain for RISC-V.  This
+ package contains the riscv32-unknown-elf toolchain, targeting bare
+ metal application with the Newlib C library.
+ .
+ The hardware targeted by this toolchain is version 2.1 of the User
+ Level ISA, variant RV32IM.  In addition, the Privileged Architecture
+ version 1.10 is supported.
+
+Package: riscv64-unknown-elf-rv64im
+Architecture: any
+Section: devel
+Depends: ${shlibs:Depends}, ${misc:Depends}
+#Suggests: 
+Description: Toolchain for the riscv64-unknown-elf target, rv64im variant
+ This package contains a development toolchain for RISC-V.  This
+ package contains the riscv64-unknown-elf toolchain, targeting bare
+ metal application with the Newlib C library.
+ .
+ The hardware targeted by this toolchain is version 2.1 of the User
+ Level ISA, variant RV64IM.  In addition, the Privileged Architecture
+ version 1.10 is supported.
