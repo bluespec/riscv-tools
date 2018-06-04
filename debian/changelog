@@ -1,30 +1,6 @@
-riscv-gnu-toolchain (20170602+3) unstable; urgency=medium
-
-  * Add binary packages for RV64IM.
-
- -- Darius Rad <darius@bluespec.com>  Fri, 04 Aug 2017 13:39:34 -0400
-
-riscv-gnu-toolchain (20170602+2) unstable; urgency=medium
-
-  * Rebuild with python.
-
- -- Darius Rad <darius@bluespec.com>  Sun, 16 Jul 2017 08:05:33 -0400
-
-riscv-gnu-toolchain (20170602+1) unstable; urgency=medium
-
-  * Update packaged version.
-
- -- Darius Rad <darius@bluespec.com>  Fri, 14 Jul 2017 16:51:37 -0400
-
-riscv-gnu-toolchain (20170104+2) unstable; urgency=medium
-
-  * Don't strip binaries.
-
- -- Darius Rad <darius@bluespec.com>  Wed, 12 Jul 2017 19:42:50 -0400
-
-riscv-gnu-toolchain (20170104+1) unstable; urgency=medium
+riscv-tools (20180620+1) unstable; urgency=medium
 
   * Initial package.
 
- -- Darius Rad <darius@bluespec.com>  Mon, 26 Jun 2017 16:39:50 -0400
+ -- Darius Rad <darius@bluespec.com>  Wed, 20 Jun 2018 17:38:17 -0400
 

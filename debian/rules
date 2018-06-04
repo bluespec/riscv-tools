@@ -1,9 +1,10 @@
 #!/usr/bin/make -f
 
 TOP=$(shell pwd)
-prefix=/opt/riscv32-unknown-elf-rv32im
+PREFIX?=/opt
+prefix=$(PREFIX)/riscv32-unknown-elf-rv32im
 #PATH:=$(PATH):$(TOP)/debian/tmp/opt/riscv32-unknown-elf-rv32im/bin
-PATH:=$(PATH):/opt/riscv32-unknown-elf-rv32im/bin:/opt/riscv64-unknown-elf-rv64im/bin
+PATH:=$(PATH):$(PREFIX)/riscv32-unknown-elf-rv32im/bin:$(PREFIX)/riscv64-unknown-elf-rv64im/bin
 
 #export DESTDIR=$(TOP)/debian/tmp
 
@@ -15,15 +16,22 @@ export DEB_BUILD_OPTIONS=nostrip
 	dh $@ --parallel
 
 override_dh_auto_configure:
-	dh_auto_configure -B debian/tmp/riscv32-unknown-elf-rv32im -- --with-arch=rv32im --prefix=/opt/riscv32-unknown-elf-rv32im
-	dh_auto_configure -B debian/tmp/riscv64-unknown-elf-rv64im -- --with-arch=rv64im --prefix=/opt/riscv64-unknown-elf-rv64im
+#	cd $(TOP)/riscv-openocd && ./bootstrap
+	dh_auto_configure -D$(TOP)/riscv-gnu-toolchain -B debian/tmp/riscv32-unknown-elf-rv32im/riscv-gnu-toolchain -- --with-arch=rv32im --prefix=$(PREFIX)/riscv32-unknown-elf-rv32im
+	dh_auto_configure -D$(TOP)/riscv-gnu-toolchain -B debian/tmp/riscv64-unknown-elf-rv64im/riscv-gnu-toolchain -- --with-arch=rv64im --prefix=$(PREFIX)/riscv64-unknown-elf-rv64im
+	dh_auto_configure -D$(TOP)/riscv-openocd -B debian/tmp/riscv32-unknown-elf-rv32im/riscv-openocd -- --prefix=$(PREFIX)/riscv32-unknown-elf-rv32im --enable-remote-bitbang --enable-jtag_vpi --disable-werror
+	dh_auto_configure -D$(TOP)/riscv-openocd -B debian/tmp/riscv64-unknown-elf-rv64im/riscv-openocd -- --prefix=$(PREFIX)/riscv64-unknown-elf-rv64im --enable-remote-bitbang --enable-jtag_vpi --disable-werror
 
 override_dh_auto_build:
-	dh_auto_build -B debian/tmp/riscv32-unknown-elf-rv32im
-	dh_auto_build -B debian/tmp/riscv64-unknown-elf-rv64im
+	dh_auto_build -B debian/tmp/riscv32-unknown-elf-rv32im/riscv-gnu-toolchain
+	dh_auto_build -B debian/tmp/riscv64-unknown-elf-rv64im/riscv-gnu-toolchain
+	dh_auto_build -B debian/tmp/riscv32-unknown-elf-rv32im/riscv-openocd
+	$(MAKE) -C debian/tmp/riscv32-unknown-elf-rv32im/riscv-openocd install
+	dh_auto_build -B debian/tmp/riscv64-unknown-elf-rv64im/riscv-openocd
+	$(MAKE) -C debian/tmp/riscv64-unknown-elf-rv64im/riscv-openocd install
 
 override_dh_install:
 	mkdir -p debian/tmp/opt
-	cp -a /opt/riscv32-unknown-elf-rv32im debian/tmp/opt/
-	cp -a /opt/riscv64-unknown-elf-rv64im debian/tmp/opt/
+	cp -a $(PREFIX)/riscv32-unknown-elf-rv32im debian/tmp/opt/
+	cp -a $(PREFIX)/riscv64-unknown-elf-rv64im debian/tmp/opt/
 	dh_install

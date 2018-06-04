@@ -1,14 +1,14 @@
-% GNU Toolchain for RISC-V RV32IM
+% GNU Tools for RISC-V RV32IM
 % Bluespec, Inc. <support@bluespec.com>
-% 2017-07-16
+% 2018-06-04
 
 <!--
   generate html with:
-    pandoc -s -f markdown -t html -o riscv-gnu-toolchain.html riscv-gnu-toolchain.md
+    pandoc -s -f markdown -t html -o riscv-tools.html riscv-tools.md
 -->
 
-This pages describes the OS packages of the GNU toolchain (binutils,
-gcc, etc.) targeting RISC-V RV32IM.
+This pages describes the OS packages of the GNU tools (binutils, gcc,
+OpenOCD, etc.) targeting RISC-V RV32IM.
 
 # Determine Your Operating System
 
@@ -16,6 +16,7 @@ The following operating systems are supported:
 
 * Debian 9 (stretch)
 * Debian 8 (jessie)
+* Ubuntu 18.04 LTS (bionic)
 * Ubuntu 16.04 LTS (xenial)
 * Ubuntu 14.04 LTS (trusty)
 * CentOS 7 / RedHat Enterprise Linux 7
@@ -89,23 +90,26 @@ download the package appropriate for your system from one of the links
 below:
 
 * Debian 9 (stretch)
-    * [64-bit](stretch/riscv32-unknown-elf-rv32im_20170602+2_amd64.deb)
-    * [32-bit](stretch/riscv32-unknown-elf-rv32im_20170602+2_i386.deb)
+    * [64-bit](stretch/riscv32-unknown-elf-rv32im_20180620+1_amd64.deb)
+    * [32-bit](stretch/riscv32-unknown-elf-rv32im_20180620+1_i386.deb)
 * Debian 8 (jessie)
-    * [64-bit](jessie/riscv32-unknown-elf-rv32im_20170602+2_amd64.deb)
-    * [32-bit](jessie/riscv32-unknown-elf-rv32im_20170602+2_i386.deb)
+    * [64-bit](jessie/riscv32-unknown-elf-rv32im_20180620+1_amd64.deb)
+    * [32-bit](jessie/riscv32-unknown-elf-rv32im_20180620+1_i386.deb)
+* Ubuntu 18.04 LTS (bionic)
+    * [64-bit](bionic/riscv32-unknown-elf-rv32im_20180620+1_amd64.deb)
+    * [32-bit](bionic/riscv32-unknown-elf-rv32im_20180620+1_i386.deb)
 * Ubuntu 16.04 LTS (xenial)
-    * [64-bit](xenial/riscv32-unknown-elf-rv32im_20170602+2_amd64.deb)
-    * [32-bit](xenial/riscv32-unknown-elf-rv32im_20170602+2_i386.deb)
+    * [64-bit](xenial/riscv32-unknown-elf-rv32im_20180620+1_amd64.deb)
+    * [32-bit](xenial/riscv32-unknown-elf-rv32im_20180620+1_i386.deb)
 * Ubuntu 14.04 LTS (trusty)
-    * [64-bit](trusty/riscv32-unknown-elf-rv32im_20170602+2_amd64.deb)
-    * [32-bit](trusty/riscv32-unknown-elf-rv32im_20170602+2_i386.deb)
+    * [64-bit](trusty/riscv32-unknown-elf-rv32im_20180620+1_amd64.deb)
+    * [32-bit](trusty/riscv32-unknown-elf-rv32im_20180620+1_i386.deb)
 * CentOS 7 / RedHat Enterprise Linux 7
-    * [64-bit](centos/riscv-gnu-toolchain-20170602+2-1.el7.centos.x86_64.rpm)
-    * [32-bit](centos/riscv-gnu-toolchain-20170602+2-1.el7.centos.i686.rpm)
+    * [64-bit](centos/riscv-tools-20180620+1-1.el7.x86_64.rpm)
+    * [32-bit](centos/riscv-tools-20180620+1-1.el7.centos.i.i686.rpm)
 * CentOS 6 / RedHat Enterprise Linux 6
-    * [64-bit](centos/riscv-gnu-toolchain-20170602+2-1.el6.x86_64.rpm)
-    * [32-bit](centos/riscv-gnu-toolchain-20170602+2-1.el6.i686.rpm)
+    * [64-bit](centos/riscv-tools-20180620+1-1.el6.x86_64.rpm)
+    * [32-bit](centos/riscv-tools-20180620+1-1.el6.i686.rpm)
 
 # Install the Package
 
@@ -156,19 +160,17 @@ yum install <package>
 # Unsupported Systems
 
 If your system is not supported above or you would otherwise like to
-build the toolchain yourself, the source can be found on
-github (<https://github.com/riscv/riscv-gnu-toolchain/>).
+build the tools yourself, the source can be found on
+github (<https://github.com/bluespec/riscv-tools/>).
 
 The following steps will build tools similar to those in the packages
 provided above:
 
 ~~~sh
-git clone --recursive -b f5fae1c https://github.com/riscv/riscv-gnu-toolchain.git
-cd riscv-gnu-toolchain
-PATH=$PATH:/opt/riscv32-unknown-elf-rv32im/bin
-./configure --with-arch=rv32im --prefix=/opt/riscv32-unknown-elf-rv32im
-make
-make install
+git clone --recursive -b packaging https://github.com/bluespec/riscv-tools.git
+cd riscv-tools
+RISCV=/opt/riscv32-unknown-elf-rv32ima
+./build-rv32ima.sh
 ~~~
 
 # Further Information
