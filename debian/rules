@@ -18,7 +18,7 @@ export DEB_BUILD_OPTIONS=nostrip
 override_dh_auto_configure:
 #	cd $(TOP)/riscv-openocd && ./bootstrap
 	dh_auto_configure -D$(TOP)/riscv-gnu-toolchain -B debian/tmp/riscv32-unknown-elf-rv32im/riscv-gnu-toolchain -- --with-arch=rv32im --prefix=$(PREFIX)/riscv32-unknown-elf-rv32im
-	dh_auto_configure -D$(TOP)/riscv-gnu-toolchain -B debian/tmp/riscv64-unknown-elf-rv64im/riscv-gnu-toolchain -- --with-arch=rv64im --prefix=$(PREFIX)/riscv64-unknown-elf-rv64im
+	dh_auto_configure -D$(TOP)/riscv-gnu-toolchain -B debian/tmp/riscv64-unknown-elf-rv64im/riscv-gnu-toolchain -- --with-arch=rv64im --prefix=$(PREFIX)/riscv64-unknown-elf-rv64im --with-cmodel=medany
 	dh_auto_configure -D$(TOP)/riscv-openocd -B debian/tmp/riscv32-unknown-elf-rv32im/riscv-openocd -- --prefix=$(PREFIX)/riscv32-unknown-elf-rv32im --enable-remote-bitbang --enable-jtag_vpi --disable-werror
 	dh_auto_configure -D$(TOP)/riscv-openocd -B debian/tmp/riscv64-unknown-elf-rv64im/riscv-openocd -- --prefix=$(PREFIX)/riscv64-unknown-elf-rv64im --enable-remote-bitbang --enable-jtag_vpi --disable-werror
 
