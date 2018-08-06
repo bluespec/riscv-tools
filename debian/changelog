@@ -1,3 +1,9 @@
+riscv-tools (20180620+2) unstable; urgency=medium
+
+  * Use cmodel=medany for RV32.
+
+ -- Darius Rad <darius@bluespec.com>  Mon, 06 Aug 2018 08:11:13 -0400
+
 riscv-tools (20180620+1) unstable; urgency=medium
 
   * Initial package.

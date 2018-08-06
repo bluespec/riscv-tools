@@ -1,4 +1,4 @@
-%global release_num 20180620+1
+%global release_num 20180620+2
 %global prefix /opt/riscv32-unknown-elf-rv32im
 
 Name: riscv-tools

@@ -1,6 +1,6 @@
 % GNU Tools for RISC-V RV32IM
 % Bluespec, Inc. <support@bluespec.com>
-% 2018-06-04
+% 2018-08-06
 
 <!--
   generate html with:
@@ -90,26 +90,26 @@ download the package appropriate for your system from one of the links
 below:
 
 * Debian 9 (stretch)
-    * [64-bit](stretch/riscv32-unknown-elf-rv32im_20180620+1_amd64.deb)
-    * [32-bit](stretch/riscv32-unknown-elf-rv32im_20180620+1_i386.deb)
+    * [64-bit](stretch/riscv32-unknown-elf-rv32im_20180620+2_amd64.deb)
+    * [32-bit](stretch/riscv32-unknown-elf-rv32im_20180620+2_i386.deb)
 * Debian 8 (jessie)
-    * [64-bit](jessie/riscv32-unknown-elf-rv32im_20180620+1_amd64.deb)
-    * [32-bit](jessie/riscv32-unknown-elf-rv32im_20180620+1_i386.deb)
+    * [64-bit](jessie/riscv32-unknown-elf-rv32im_20180620+2_amd64.deb)
+    * [32-bit](jessie/riscv32-unknown-elf-rv32im_20180620+2_i386.deb)
 * Ubuntu 18.04 LTS (bionic)
-    * [64-bit](bionic/riscv32-unknown-elf-rv32im_20180620+1_amd64.deb)
-    * [32-bit](bionic/riscv32-unknown-elf-rv32im_20180620+1_i386.deb)
+    * [64-bit](bionic/riscv32-unknown-elf-rv32im_20180620+2_amd64.deb)
+    * [32-bit](bionic/riscv32-unknown-elf-rv32im_20180620+2_i386.deb)
 * Ubuntu 16.04 LTS (xenial)
-    * [64-bit](xenial/riscv32-unknown-elf-rv32im_20180620+1_amd64.deb)
-    * [32-bit](xenial/riscv32-unknown-elf-rv32im_20180620+1_i386.deb)
+    * [64-bit](xenial/riscv32-unknown-elf-rv32im_20180620+2_amd64.deb)
+    * [32-bit](xenial/riscv32-unknown-elf-rv32im_20180620+2_i386.deb)
 * Ubuntu 14.04 LTS (trusty)
-    * [64-bit](trusty/riscv32-unknown-elf-rv32im_20180620+1_amd64.deb)
-    * [32-bit](trusty/riscv32-unknown-elf-rv32im_20180620+1_i386.deb)
+    * [64-bit](trusty/riscv32-unknown-elf-rv32im_20180620+2_amd64.deb)
+    * [32-bit](trusty/riscv32-unknown-elf-rv32im_20180620+2_i386.deb)
 * CentOS 7 / RedHat Enterprise Linux 7
-    * [64-bit](centos/riscv-tools-20180620+1-1.el7.x86_64.rpm)
-    * [32-bit](centos/riscv-tools-20180620+1-1.el7.centos.i.i686.rpm)
+    * [64-bit](centos/riscv-tools-20180620+2-1.el7.x86_64.rpm)
+    * [32-bit](centos/riscv-tools-20180620+2-1.el7.centos.i.i686.rpm)
 * CentOS 6 / RedHat Enterprise Linux 6
-    * [64-bit](centos/riscv-tools-20180620+1-1.el6.x86_64.rpm)
-    * [32-bit](centos/riscv-tools-20180620+1-1.el6.i686.rpm)
+    * [64-bit](centos/riscv-tools-20180620+2-1.el6.x86_64.rpm)
+    * [32-bit](centos/riscv-tools-20180620+2-1.el6.i686.rpm)
 
 # Install the Package
 
