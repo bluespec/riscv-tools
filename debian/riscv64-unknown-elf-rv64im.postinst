@@ -1,0 +1,2 @@
+#!/bin/sh
+update-alternatives --install /usr/bin/openocd openocd /opt/riscv64-unknown-elf-rv64im/bin/openocd 100

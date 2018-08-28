@@ -1,6 +1,6 @@
 % GNU Tools for RISC-V RV32IM
 % Bluespec, Inc. <support@bluespec.com>
-% 2018-08-06
+% 2018-08-28
 
 <!--
   generate html with:
@@ -80,8 +80,9 @@ uname -m
 That should usually return something like `x86_64`, indicating 64-bit,
 or `i686`, indicating 32-bit.
 
-Note that this is the architecture of the host; all of the packages
-provides tools for a 32-bit target architecture (i.e., RV32IM).
+Note that this is the architecture of the host.  There are packages
+for both 32-bit and 64-bit target architectures (RV32IM and RV64IM,
+respectively).
 
 # Download the Installation Package
 
@@ -90,26 +91,36 @@ download the package appropriate for your system from one of the links
 below:
 
 * Debian 9 (stretch)
-    * [64-bit](stretch/riscv32-unknown-elf-rv32im_20180620+2_amd64.deb)
-    * [32-bit](stretch/riscv32-unknown-elf-rv32im_20180620+2_i386.deb)
+    * [rv32im target on amd64 host](stretch/riscv32-unknown-elf-rv32im_20180620+3_amd64.deb)
+    * [rv32im target on i386 host](stretch/riscv32-unknown-elf-rv32im_20180620+3_i386.deb)
+    * [rv64im target on amd64 host](stretch/riscv64-unknown-elf-rv64im_20180620+3_amd64.deb)
+    * [rv64im target on i386 host](stretch/riscv64-unknown-elf-rv64im_20180620+3_i386.deb)
 * Debian 8 (jessie)
-    * [64-bit](jessie/riscv32-unknown-elf-rv32im_20180620+2_amd64.deb)
-    * [32-bit](jessie/riscv32-unknown-elf-rv32im_20180620+2_i386.deb)
+    * [rv32im target on amd64 host](jessie/riscv32-unknown-elf-rv32im_20180620+3_amd64.deb)
+    * [rv32im target on i386 host](jessie/riscv32-unknown-elf-rv32im_20180620+3_i386.deb)
+    * [rv64im target on amd64 host](jessie/riscv64-unknown-elf-rv64im_20180620+3_amd64.deb)
+    * [rv64im target on i386 host](jessie/riscv64-unknown-elf-rv64im_20180620+3_i386.deb)
 * Ubuntu 18.04 LTS (bionic)
-    * [64-bit](bionic/riscv32-unknown-elf-rv32im_20180620+2_amd64.deb)
-    * [32-bit](bionic/riscv32-unknown-elf-rv32im_20180620+2_i386.deb)
+    * [rv32im target on amd64 host](bionic/riscv32-unknown-elf-rv32im_20180620+3_amd64.deb)
+    * [rv32im target on i386 host](bionic/riscv32-unknown-elf-rv32im_20180620+3_i386.deb)
+    * [rv64im target on amd64 host](bionic/riscv64-unknown-elf-rv64im_20180620+3_amd64.deb)
+    * [rv64im target on i386 host](bionic/riscv64-unknown-elf-rv64im_20180620+3_i386.deb)
 * Ubuntu 16.04 LTS (xenial)
-    * [64-bit](xenial/riscv32-unknown-elf-rv32im_20180620+2_amd64.deb)
-    * [32-bit](xenial/riscv32-unknown-elf-rv32im_20180620+2_i386.deb)
+    * [rv32im target on amd64 host](xenial/riscv32-unknown-elf-rv32im_20180620+3_amd64.deb)
+    * [rv32im target on i386 host](xenial/riscv32-unknown-elf-rv32im_20180620+3_i386.deb)
+    * [rv64im target on amd64 host](xenial/riscv64-unknown-elf-rv64im_20180620+3_amd64.deb)
+    * [rv64im target on i386 host](xenial/riscv64-unknown-elf-rv64im_20180620+3_i386.deb)
 * Ubuntu 14.04 LTS (trusty)
-    * [64-bit](trusty/riscv32-unknown-elf-rv32im_20180620+2_amd64.deb)
-    * [32-bit](trusty/riscv32-unknown-elf-rv32im_20180620+2_i386.deb)
+    * [rv32im target on amd64 host](trusty/riscv32-unknown-elf-rv32im_20180620+3_amd64.deb)
+    * [rv32im target on i386 host](trusty/riscv32-unknown-elf-rv32im_20180620+3_i386.deb)
+    * [rv64im target on amd64 host](trusty/riscv64-unknown-elf-rv64im_20180620+3_amd64.deb)
+    * [rv64im target on i386 host](trusty/riscv64-unknown-elf-rv64im_20180620+3_i386.deb)
 * CentOS 7 / RedHat Enterprise Linux 7
-    * [64-bit](centos/riscv-tools-20180620+2-1.el7.x86_64.rpm)
-    * [32-bit](centos/riscv-tools-20180620+2-1.el7.centos.i.i686.rpm)
+    * [rv32im target on amd64 host](centos/riscv-tools-20180620+3-1.el7.x86_64.rpm)
+    * [rv32im target on i386 host](centos/riscv-tools-20180620+3-1.el7.centos.i.i686.rpm)
 * CentOS 6 / RedHat Enterprise Linux 6
-    * [64-bit](centos/riscv-tools-20180620+2-1.el6.x86_64.rpm)
-    * [32-bit](centos/riscv-tools-20180620+2-1.el6.i686.rpm)
+    * [rv32im target on amd64 host](centos/riscv-tools-20180620+3-1.el6.x86_64.rpm)
+    * [rv32im target on i386 host](centos/riscv-tools-20180620+3-1.el6.i686.rpm)
 
 # Install the Package
 

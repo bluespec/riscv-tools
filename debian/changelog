@@ -1,3 +1,9 @@
+riscv-tools (20180620+3) unstable; urgency=medium
+
+  * Add alternatives for /usr/bin/openocd.
+
+ -- Darius Rad <darius@bluespec.com>  Mon, 27 Aug 2018 21:13:44 -0400
+
 riscv-tools (20180620+2) unstable; urgency=medium
 
   * Use cmodel=medany for RV32.

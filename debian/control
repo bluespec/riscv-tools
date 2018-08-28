@@ -10,7 +10,8 @@ Package: riscv32-unknown-elf-rv32im
 Architecture: any
 Section: devel
 Depends: ${shlibs:Depends}, ${misc:Depends}
-#Suggests: 
+#Suggests:
+Conflicts: openocd
 Description: Tools for the riscv32-unknown-elf target, rv32im variant
  This package contains development tools for RISC-V.  This package
  contains the riscv32-unknown-elf toolchain, targeting bare metal
@@ -24,7 +25,8 @@ Package: riscv64-unknown-elf-rv64im
 Architecture: any
 Section: devel
 Depends: ${shlibs:Depends}, ${misc:Depends}
-#Suggests: 
+#Suggests:
+Conflicts: openocd
 Description: Tools for the riscv64-unknown-elf target, rv64im variant
  This package contains development tools for RISC-V.  This package
  contains the riscv64-unknown-elf toolchain, targeting bare metal
