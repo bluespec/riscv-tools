@@ -116,11 +116,11 @@ below:
     * [rv64im target on amd64 host](trusty/riscv64-unknown-elf-rv64im_20180620+3_amd64.deb)
     * [rv64im target on i386 host](trusty/riscv64-unknown-elf-rv64im_20180620+3_i386.deb)
 * CentOS 7 / RedHat Enterprise Linux 7
-    * [rv32im target on amd64 host](centos/riscv-tools-20180620+3-1.el7.x86_64.rpm)
-    * [rv32im target on i386 host](centos/riscv-tools-20180620+3-1.el7.centos.i.i686.rpm)
+    * [rv32im and rv64im targets on amd64 host](centos/riscv-tools-20180620+3-1.el7.x86_64.rpm)
+    * [rv32im and rv64im targets on i386 host](centos/riscv-tools-20180620+3-1.el7.i686.rpm)
 * CentOS 6 / RedHat Enterprise Linux 6
-    * [rv32im target on amd64 host](centos/riscv-tools-20180620+3-1.el6.x86_64.rpm)
-    * [rv32im target on i386 host](centos/riscv-tools-20180620+3-1.el6.i686.rpm)
+    * [rv32im and rv64im targets on amd64 host](centos/riscv-tools-20180620+3-1.el6.x86_64.rpm)
+    * [rv32im and rv64im targets on i386 host](centos/riscv-tools-20180620+3-1.el6.i686.rpm)
 
 # Install the Package
 
