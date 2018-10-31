@@ -1,6 +1,6 @@
 % GNU Tools for RISC-V RV32IM
 % Bluespec, Inc. <support@bluespec.com>
-% 2018-08-28
+% 2018-10-31
 
 <!--
   generate html with:
@@ -8,7 +8,7 @@
 -->
 
 This pages describes the OS packages of the GNU tools (binutils, gcc,
-OpenOCD, etc.) targeting RISC-V RV32IM.
+OpenOCD, etc.) targeting various RISC-V configurations.
 
 # Determine Your Operating System
 
@@ -82,7 +82,7 @@ or `i686`, indicating 32-bit.
 
 Note that this is the architecture of the host.  There are packages
 for both 32-bit and 64-bit target architectures (RV32IM and RV64IM,
-respectively).
+respectively), for bare metal and GNU/Linux.
 
 # Download the Installation Package
 
@@ -91,36 +91,46 @@ download the package appropriate for your system from one of the links
 below:
 
 * Debian 9 (stretch)
-    * [rv32im target on amd64 host](stretch/riscv32-unknown-elf-rv32im_20180620+3_amd64.deb)
-    * [rv32im target on i386 host](stretch/riscv32-unknown-elf-rv32im_20180620+3_i386.deb)
-    * [rv64im target on amd64 host](stretch/riscv64-unknown-elf-rv64im_20180620+3_amd64.deb)
-    * [rv64im target on i386 host](stretch/riscv64-unknown-elf-rv64im_20180620+3_i386.deb)
+    * [rv32im bare metal target on amd64 host](stretch/riscv32-unknown-elf-rv32im_20180620+4_amd64.deb)
+    * [rv32im bare metal target on i386 host](stretch/riscv32-unknown-elf-rv32im_20180620+4_i386.deb)
+    * [rv64im bare metal target on amd64 host](stretch/riscv64-unknown-elf-rv64im_20180620+4_amd64.deb)
+    * [rv64im bare metal target on i386 host](stretch/riscv64-unknown-elf-rv64im_20180620+4_i386.deb)
+    * [rv64ima GNU/Linux target on amd64 host](stretch/riscv64-unknown-linux-gnu-rv64ima_20180620+4_amd64.deb)
+    * [rv64ima GNU/Linux target on i386 host](stretch/riscv64-unknown-linux-gnu-rv64ima_20180620+4_i386.deb)
 * Debian 8 (jessie)
-    * [rv32im target on amd64 host](jessie/riscv32-unknown-elf-rv32im_20180620+3_amd64.deb)
-    * [rv32im target on i386 host](jessie/riscv32-unknown-elf-rv32im_20180620+3_i386.deb)
-    * [rv64im target on amd64 host](jessie/riscv64-unknown-elf-rv64im_20180620+3_amd64.deb)
-    * [rv64im target on i386 host](jessie/riscv64-unknown-elf-rv64im_20180620+3_i386.deb)
+    * [rv32im bare metal target on amd64 host](jessie/riscv32-unknown-elf-rv32im_20180620+4_amd64.deb)
+    * [rv32im bare metal target on i386 host](jessie/riscv32-unknown-elf-rv32im_20180620+4_i386.deb)
+    * [rv64im bare metal target on amd64 host](jessie/riscv64-unknown-elf-rv64im_20180620+4_amd64.deb)
+    * [rv64im bare metal target on i386 host](jessie/riscv64-unknown-elf-rv64im_20180620+4_i386.deb)
+    * [rv64ima GNU/Linux target on amd64 host](jessie/riscv64-unknown-linux-gnu-rv64ima_20180620+4_amd64.deb)
+    * [rv64ima GNU/Linux target on i386 host](jessie/riscv64-unknown-linux-gnu-rv64ima_20180620+4_i386.deb)
 * Ubuntu 18.04 LTS (bionic)
-    * [rv32im target on amd64 host](bionic/riscv32-unknown-elf-rv32im_20180620+3_amd64.deb)
-    * [rv32im target on i386 host](bionic/riscv32-unknown-elf-rv32im_20180620+3_i386.deb)
-    * [rv64im target on amd64 host](bionic/riscv64-unknown-elf-rv64im_20180620+3_amd64.deb)
-    * [rv64im target on i386 host](bionic/riscv64-unknown-elf-rv64im_20180620+3_i386.deb)
+    * [rv32im bare metal target on amd64 host](bionic/riscv32-unknown-elf-rv32im_20180620+4_amd64.deb)
+    * [rv32im bare metal target on i386 host](bionic/riscv32-unknown-elf-rv32im_20180620+4_i386.deb)
+    * [rv64im bare metal target on amd64 host](bionic/riscv64-unknown-elf-rv64im_20180620+4_amd64.deb)
+    * [rv64im bare metal target on i386 host](bionic/riscv64-unknown-elf-rv64im_20180620+4_i386.deb)
+    * [rv64ima GNU/Linux target on amd64 host](bionic/riscv64-unknown-linux-gnu-rv64ima_20180620+4_amd64.deb)
+    * [rv64ima GNU/Linux target on i386 host](bionic/riscv64-unknown-linux-gnu-rv64ima_20180620+4_i386.deb)
 * Ubuntu 16.04 LTS (xenial)
-    * [rv32im target on amd64 host](xenial/riscv32-unknown-elf-rv32im_20180620+3_amd64.deb)
-    * [rv32im target on i386 host](xenial/riscv32-unknown-elf-rv32im_20180620+3_i386.deb)
-    * [rv64im target on amd64 host](xenial/riscv64-unknown-elf-rv64im_20180620+3_amd64.deb)
-    * [rv64im target on i386 host](xenial/riscv64-unknown-elf-rv64im_20180620+3_i386.deb)
+    * [rv32im bare metal target on amd64 host](xenial/riscv32-unknown-elf-rv32im_20180620+4_amd64.deb)
+    * [rv32im bare metal target on i386 host](xenial/riscv32-unknown-elf-rv32im_20180620+4_i386.deb)
+    * [rv64im bare metal target on amd64 host](xenial/riscv64-unknown-elf-rv64im_20180620+4_amd64.deb)
+    * [rv64im bare metal target on i386 host](xenial/riscv64-unknown-elf-rv64im_20180620+4_i386.deb)
+    * [rv64ima GNU/Linux target on amd64 host](xenial/riscv64-unknown-linux-gnu-rv64ima_20180620+4_amd64.deb)
+    * [rv64ima GNU/Linux target on i386 host](xenial/riscv64-unknown-linux-gnu-rv64ima_20180620+4_i386.deb)
 * Ubuntu 14.04 LTS (trusty)
-    * [rv32im target on amd64 host](trusty/riscv32-unknown-elf-rv32im_20180620+3_amd64.deb)
-    * [rv32im target on i386 host](trusty/riscv32-unknown-elf-rv32im_20180620+3_i386.deb)
-    * [rv64im target on amd64 host](trusty/riscv64-unknown-elf-rv64im_20180620+3_amd64.deb)
-    * [rv64im target on i386 host](trusty/riscv64-unknown-elf-rv64im_20180620+3_i386.deb)
+    * [rv32im bare metal target on amd64 host](trusty/riscv32-unknown-elf-rv32im_20180620+4_amd64.deb)
+    * [rv32im bare metal target on i386 host](trusty/riscv32-unknown-elf-rv32im_20180620+4_i386.deb)
+    * [rv64im bare metal target on amd64 host](trusty/riscv64-unknown-elf-rv64im_20180620+4_amd64.deb)
+    * [rv64im bare metal target on i386 host](trusty/riscv64-unknown-elf-rv64im_20180620+4_i386.deb)
+    * [rv64ima GNU/Linux target on amd64 host](trusty/riscv64-unknown-linux-gnu-rv64ima_20180620+4_amd64.deb)
+    * [rv64ima GNU/Linux target on i386 host](trusty/riscv64-unknown-linux-gnu-rv64ima_20180620+4_i386.deb)
 * CentOS 7 / RedHat Enterprise Linux 7
-    * [rv32im and rv64im targets on amd64 host](centos/riscv-tools-20180620+3-1.el7.x86_64.rpm)
-    * [rv32im and rv64im targets on i386 host](centos/riscv-tools-20180620+3-1.el7.i686.rpm)
+    * [rv32im and rv64im bare metal targets on amd64 host](centos/riscv-tools-20180620+4-1.el7.x86_64.rpm)
+    * [rv32im and rv64im bare metal targets on i386 host](centos/riscv-tools-20180620+4-1.el7.i686.rpm)
 * CentOS 6 / RedHat Enterprise Linux 6
-    * [rv32im and rv64im targets on amd64 host](centos/riscv-tools-20180620+3-1.el6.x86_64.rpm)
-    * [rv32im and rv64im targets on i386 host](centos/riscv-tools-20180620+3-1.el6.i686.rpm)
+    * [rv32im and rv64im bare metal targets on amd64 host](centos/riscv-tools-20180620+4-1.el6.x86_64.rpm)
+    * [rv32im and rv64im bare metal targets on i386 host](centos/riscv-tools-20180620+4-1.el6.i686.rpm)
 
 # Install the Package
 

@@ -1,3 +1,9 @@
+riscv-tools (20180620+4) unstable; urgency=medium
+
+  * Add package for unknown-linux-gnu RV64IMA.
+
+ -- Darius Rad <darius@bluespec.com>  Wed, 31 Oct 2018 14:51:45 -0400
+
 riscv-tools (20180620+3) unstable; urgency=medium
 
   * Add alternatives for /usr/bin/openocd.
